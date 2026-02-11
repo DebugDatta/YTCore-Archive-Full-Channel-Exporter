@@ -1,102 +1,87 @@
 
+---
+
 # 🎥 YTCore Archive – Full Channel Exporter
 
-YTCore Archive turns YouTube channels into organized Excel files. It captures every playlist, short, and live stream so nothing is missed. The result is a clean spreadsheet with video durations, publish dates, and clickable links for easy navigation.
+YTCore Archive converts an entire YouTube channel into a structured, navigable Excel archive. It captures playlists, videos, shorts, and streams into a clean, organized spreadsheet.
 
-Perfect for tracking courses, research, or archiving content.
-
----
-
-## 📦 Repository Structure
-
-```
-app.py
-requirements.txt
-README.md
-```
-
-* **app.py** – Main Streamlit application
-* **requirements.txt** – Required Python dependencies
+🌐 **Live App:**
+[https://ytcore.streamlit.app/](https://ytcore.streamlit.app/)
 
 ---
 
-## ✨ What It Does
+## ✨ Features
 
-* Extracts all playlists from a channel
+* Extracts all playlists
 * Scans `/videos`, `/shorts`, `/streams`
-* Detects videos not assigned to playlists
-* Sorts videos by publish date (newest first)
+* Detects uncategorized videos
+* Sorts by publish date (newest first)
 * Calculates duration per category
-* Generates a structured Excel archive
+* Multi-threaded processing
+* Clickable Excel links
+* Back-to-summary navigation
+* Auto-adjusted columns
 
 ---
 
-## 📊 Excel Output Includes
+## 📊 Excel Output
 
-### Channel_Info
+**Channel_Info**
 
-* Export tool
 * Export date
 * Total duration
 
-### Summary
+**Summary**
 
-* Category name
+* Category
 * Video count
-* Total duration
-* Clickable navigation links
+* Duration
+* Clickable links
 
-### Playlist / Category Sheets
+**Playlist / Category Sheets**
 
 * Video Title
 * Duration (HH:MM:SS)
-* Video Link (clickable)
+* Video Link
 * Publish Date (YYYY-MM-DD)
-* Back to Summary navigation
 
 ---
 
-## 🚀 Installation & Run
-
-### Clone the Repository
+## 🚀 Run Locally
 
 ```bash
 git clone https://github.com/DebugDatta/YTCore-Archive-Full-Channel-Exporter.git
-cd YTCore-Archive-Full-Channel-Exporter
 ```
 
-### Install Dependencies
+```bash
+cd YTCore-Archive-Full-Channel-Exporter
+```
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run the App
-
 ```bash
 python -m streamlit run app.py
 ```
 
-Open the local URL shown in the terminal.
-
 ---
 
-## 🛠 Tech Stack
+## 📦 Requirements
 
-* Python 3.8+
-* Streamlit
-* yt-dlp
-* pandas
-* openpyxl
-* concurrent.futures
+```
+streamlit
+yt-dlp
+pandas
+openpyxl
+```
 
 ---
 
 ## ⚠ Limitations
 
-* Private or members-only videos cannot be accessed
+* Private / members-only videos not accessible
 * Region-restricted videos may fail
-* Metadata accuracy depends on YouTube availability
 
 ---
 
